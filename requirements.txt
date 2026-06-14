@@ -1,0 +1,34 @@
+# --- Telegram bot framework ---
+# job-queue: retention cleanup task; rate-limiter: avoids Telegram flood limits
+python-telegram-bot[job-queue,rate-limiter]==21.6
+
+# --- AI backend ---
+anthropic>=0.40.0
+
+# --- Resume parsing ---
+pdfplumber>=0.11.0
+python-docx>=1.1.2
+pypdf>=4.3.0
+
+# --- ATS scoring (keyword overlap + semantic similarity) ---
+scikit-learn>=1.4.0
+numpy>=1.26.0
+
+# --- PDF output generation ---
+reportlab>=4.2.0
+
+# --- Database (Postgres in prod, SQLite for local dev) ---
+SQLAlchemy[asyncio]>=2.0.30
+aiosqlite>=0.20.0
+asyncpg>=0.29.0
+
+# --- Payments ---
+razorpay>=1.4.2
+
+# --- Webhook server (Razorpay payment confirmation) ---
+aiohttp>=3.9.5
+
+# --- Config / env ---
+python-dotenv>=1.0.1
+pydantic>=2.7.0
+pydantic-settings>=2.3.0
